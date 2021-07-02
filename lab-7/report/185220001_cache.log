@@ -1,0 +1,65 @@
+----------------------------------------
+Exception happened during processing of request from ('10.0.0.24', 51230)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/socketserver.py", line 320, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/local/lib/python3.6/socketserver.py", line 351, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/http/server.py", line 418, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/http/server.py", line 406, in handle_one_request
+    method()
+  File "/NJU/utils/tracer.py", line 25, in wrapper
+    ret = method(*args, **kwargs)
+  File "/NJU/cachingServer/cachingServer.py", line 229, in do_GET
+    with open('testCache_output.txt', 'a') as writer:
+OSError: [Errno 30] Read-only file system: 'testCache_output.txt'
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('10.0.0.24', 51232)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/socketserver.py", line 320, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/local/lib/python3.6/socketserver.py", line 351, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/http/server.py", line 418, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/http/server.py", line 406, in handle_one_request
+    method()
+  File "/NJU/utils/tracer.py", line 25, in wrapper
+    ret = method(*args, **kwargs)
+  File "/NJU/cachingServer/cachingServer.py", line 229, in do_GET
+    with open('testCache_output.txt', 'a') as writer:
+OSError: [Errno 30] Read-only file system: 'testCache_output.txt'
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('10.0.0.24', 51234)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/socketserver.py", line 320, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/local/lib/python3.6/socketserver.py", line 351, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/http/server.py", line 418, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/http/server.py", line 406, in handle_one_request
+    method()
+  File "/NJU/utils/tracer.py", line 25, in wrapper
+    ret = method(*args, **kwargs)
+  File "/NJU/cachingServer/cachingServer.py", line 229, in do_GET
+    with open('testCache_output.txt', 'a') as writer:
+OSError: [Errno 30] Read-only file system: 'testCache_output.txt'
+----------------------------------------
+2021/06/16-03:55:41| [INFO] Caching server started
+Caching server serving on http://0.0.0.0:8036

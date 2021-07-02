@@ -1,0 +1,114 @@
+test_01_cache_missed_1 (testcases.test_all.TestAll) ... ERROR
+test_02_cache_hit_1 (testcases.test_all.TestAll) ... ERROR
+test_03_not_found (testcases.test_all.TestAll) ... ERROR
+
+======================================================================
+ERROR: test_01_cache_missed_1 (testcases.test_all.TestAll)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onl/NJU_experiment/frame/testcases/test_all.py", line 29, in test_01_cache_missed_1
+    self.cache_missed_template(targetDomain, cachePort,
+  File "/home/onl/NJU_experiment/frame/testcases/baseTestcase.py", line 80, in cache_missed_template
+    self.request_template(expectProcedures, visitIP, visitPort, target, dnsIP, dnsPort)
+  File "/home/onl/NJU_experiment/frame/testcases/baseTestcase.py", line 58, in request_template
+    status, body = curl(url, dnsIP, dnsPort, method=method)
+  File "/home/onl/NJU_experiment/frame/utils/network.py", line 79, in curl
+    return _request(req)
+  File "/home/onl/NJU_experiment/frame/utils/network.py", line 18, in wrapper
+    ret = func(*args, **kwargs)
+  File "/home/onl/NJU_experiment/frame/utils/network.py", line 54, in _request
+    with urllib.request.urlopen(req) as f:
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 1379, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/lib/python3.8/urllib/request.py", line 1354, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1347, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 276, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+======================================================================
+ERROR: test_02_cache_hit_1 (testcases.test_all.TestAll)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onl/NJU_experiment/frame/testcases/test_all.py", line 34, in test_02_cache_hit_1
+    self.cache_hit_template(targetDomain, cachePort,
+  File "/home/onl/NJU_experiment/frame/testcases/baseTestcase.py", line 90, in cache_hit_template
+    self.request_template(expectProcedures, visitIP, visitPort, target, dnsIP, dnsPort)
+  File "/home/onl/NJU_experiment/frame/testcases/baseTestcase.py", line 58, in request_template
+    status, body = curl(url, dnsIP, dnsPort, method=method)
+  File "/home/onl/NJU_experiment/frame/utils/network.py", line 79, in curl
+    return _request(req)
+  File "/home/onl/NJU_experiment/frame/utils/network.py", line 18, in wrapper
+    ret = func(*args, **kwargs)
+  File "/home/onl/NJU_experiment/frame/utils/network.py", line 54, in _request
+    with urllib.request.urlopen(req) as f:
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 1379, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/lib/python3.8/urllib/request.py", line 1354, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1347, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 276, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+======================================================================
+ERROR: test_03_not_found (testcases.test_all.TestAll)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onl/NJU_experiment/frame/testcases/test_all.py", line 39, in test_03_not_found
+    self.not_found_template(targetDomain, cachePort,
+  File "/home/onl/NJU_experiment/frame/testcases/baseTestcase.py", line 118, in not_found_template
+    status, body = curl(url, dnsIP, dnsPort)
+  File "/home/onl/NJU_experiment/frame/utils/network.py", line 79, in curl
+    return _request(req)
+  File "/home/onl/NJU_experiment/frame/utils/network.py", line 18, in wrapper
+    ret = func(*args, **kwargs)
+  File "/home/onl/NJU_experiment/frame/utils/network.py", line 54, in _request
+    with urllib.request.urlopen(req) as f:
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 1379, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/lib/python3.8/urllib/request.py", line 1354, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1347, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 276, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.919s
+
+FAILED (errors=3)
